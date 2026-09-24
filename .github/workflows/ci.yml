@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks out and taps this repository as pgedge/tap.
+      - uses: Homebrew/actions/setup-homebrew@848c272c7bfe984a197bd4d16383f4c106ec61e6 # main
+      - name: brew style
+        run: brew style pgedge/tap
+      # Until the first release commits a cask, there is nothing to
+      # audit, and brew audit fails on an empty tap.
+      - name: brew audit
+        run: |
+          if compgen -G "$(brew --repo pgedge/tap)/Casks/*.rb" > /dev/null; then
+            brew audit --cask --tap pgedge/tap
+          fi

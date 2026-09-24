@@ -1,0 +1,20 @@
+# Build artifacts
+bin/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Secrets
+.env
+*.password
+
+# Claude
+.claude/
+CLAUDE.local.md
+
+# Audit artifacts
+REPO_READY_AUDIT.md
