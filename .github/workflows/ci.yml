@@ -11,9 +11,14 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      # Checks out and taps this repository as pgedge/tap.
+      # Checks out and taps this repository as pgedge/tap. Without the
+      # token, git prompts for credentials on a non-public repository
+      # and retries with backoff until the job is cancelled.
       - uses: Homebrew/actions/setup-homebrew@848c272c7bfe984a197bd4d16383f4c106ec61e6 # main
+        with:
+          token: ${{ github.token }}
       - name: brew style
         run: brew style pgedge/tap
       # Until the first release commits a cask, there is nothing to
