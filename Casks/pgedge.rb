@@ -36,9 +36,12 @@ cask "pgedge" do
   fish_completion "completions/pgedge.fish"
   zsh_completion "completions/pgedge.zsh"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/pgedge"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr",
+          args:           ["-dr", "com.apple.quarantine", "pgedge"],
+          chdir:          ".",
+          writable_paths: ["pgedge"]
     end
   end
 
