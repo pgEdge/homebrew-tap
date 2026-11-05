@@ -16,7 +16,7 @@ jobs:
       # Checks out and taps this repository as pgedge/tap. Without the
       # token, git prompts for credentials on a non-public repository
       # and retries with backoff until the job is cancelled.
-      - uses: Homebrew/actions/setup-homebrew@d482da0e602890d3160aade42e72c8556103bf04 # main
+      - uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # main
         with:
           token: ${{ github.token }}
       - name: brew style
