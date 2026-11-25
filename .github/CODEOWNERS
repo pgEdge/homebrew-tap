@@ -16,6 +16,7 @@ release*.sh  @AntTheLimey @pgEdge/build-packaging
 sign*.sh  @AntTheLimey @pgEdge/build-packaging
 sign*.py  @AntTheLimey @pgEdge/build-packaging
 Dockerfile*  @AntTheLimey @pgEdge/build-packaging
+/Casks/  @AntTheLimey @pgEdge/build-packaging
 
 # Ownership and AI review configuration: code owners only.
 /CODEOWNERS  @AntTheLimey
