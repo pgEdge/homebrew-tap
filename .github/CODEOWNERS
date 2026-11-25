@@ -19,8 +19,8 @@ Dockerfile*  @AntTheLimey @pgEdge/build-packaging
 /Casks/  @AntTheLimey @pgEdge/build-packaging
 
 # Ownership and AI review configuration: code owners only.
-/CODEOWNERS  @AntTheLimey @dpage @pgEdge/build-packaging
-/.github/CODEOWNERS  @AntTheLimey @dpage @pgEdge/build-packaging
-/docs/CODEOWNERS  @AntTheLimey @dpage @pgEdge/build-packaging
-/REVIEW.md  @AntTheLimey @dpage @pgEdge/build-packaging
-/.coderabbit.yaml  @AntTheLimey @dpage @pgEdge/build-packaging
+/CODEOWNERS  @AntTheLimey @dpage
+/.github/CODEOWNERS  @AntTheLimey @dpage
+/docs/CODEOWNERS  @AntTheLimey @dpage
+/REVIEW.md  @AntTheLimey @dpage
+/.coderabbit.yaml  @AntTheLimey @dpage
